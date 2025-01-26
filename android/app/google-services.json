@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "930423057143",
+    "project_id": "kptravelhub",
+    "storage_bucket": "kptravelhub.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930423057143:android:cd457ae685dd85ad6601f2",
+        "android_client_info": {
+          "package_name": "com.example.kp_travel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaGMh_1GbXozAR2YHX1vOgcjQagiTS7eM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
