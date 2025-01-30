@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
 class WelcomePage extends StatelessWidget {
   WelcomePage({super.key});
 
+  // var emailController = TextEditingController();
+  // var passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,6 +91,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                   onPressed: () {
                     // Navigate to the login screen
+
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -106,7 +110,8 @@ class WelcomePage extends StatelessWidget {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomeScreen(), // Replace with your actual home screen widget
+                    builder: (context) =>
+                        HomeScreen(), // Replace with your actual home screen widget
                   ),
                 );
               },
@@ -154,7 +159,8 @@ class CustomTextField extends StatelessWidget {
           TextField(
             decoration: InputDecoration(
               filled: true,
-              fillColor: const Color(0xFFFFFFFF), // Input field fill color
+              fillColor: const Color(0xFFFFFFFF),
+              // Input field fill color
               hintText: placeholderText,
               hintStyle: const TextStyle(
                 color: Color(0xFF71717A), // Placeholder color
