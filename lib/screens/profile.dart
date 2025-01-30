@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'edit_profile.dart';  // Import your EditProfilePage
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -61,10 +62,11 @@ class ProfilePage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
+                    // Navigate to EditProfilePage when button is pressed
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ProfilePage(),
+                        builder: (context) => const EditProfilePage(),
                       ),
                     );
                   },
@@ -79,7 +81,11 @@ class ProfilePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const ProfilePage()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green.shade50,
                     foregroundColor: Colors.green,

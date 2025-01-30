@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kp_travel/screens/profile.dart';
 
+import '../calculation.dart';
+import 'booking.dart';
+
+// HomeScreen Widget
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -16,12 +21,15 @@ class HomeScreen extends StatelessWidget {
           icon: const Icon(Icons.menu, color: Colors.black),
           onPressed: () {},
         ),
-        title: const Text(
-          'KPT',
-          style: TextStyle(
-            color: HomeScreen.customGreen, // Apply custom green color here
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
+        title: Align(
+          alignment: Alignment.center, // Align the title to the left
+          child: const Text(
+            'KPT',
+            style: TextStyle(
+              color: HomeScreen.customGreen, // Apply custom green color here
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+            ),
           ),
         ),
         actions: [
@@ -51,7 +59,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: _buildBottomNavigationBar(),
+      bottomNavigationBar: _buildBottomNavigationBar(context),
     );
   }
 
@@ -256,12 +264,30 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  BottomNavigationBar _buildBottomNavigationBar() {
+  BottomNavigationBar _buildBottomNavigationBar(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: 0,
       selectedItemColor: Colors.black,
-      unselectedItemColor: Colors.grey,
+      unselectedItemColor: Colors.black,
       showUnselectedLabels: true,
+      onTap: (index) {
+        if (index == 1) { // Navigate to Search/PlanYourStayScreen
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PlanYourStayScreen()),
+          );
+        } else if (index == 2) { // Navigate to BookingScreen
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BookingScreen()),
+          );
+        } else if (index == 3) { // Navigate to ProfilePage
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ProfilePage()),
+          );
+        }
+      },
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),

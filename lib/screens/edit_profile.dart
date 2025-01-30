@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ProfilePage(),
-    );
-  }
-}
-
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class EditProfilePage extends StatelessWidget {
+  const EditProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +31,7 @@ class ProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Devon Lane',
+              'shaheer ali',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Text('Preview', style: TextStyle(color: Colors.grey)),
